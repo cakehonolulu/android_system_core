@@ -463,7 +463,7 @@ int __android_log_btwrite(int32_t tag, char type, const void *payload,
     return write_to_log(LOG_ID_EVENTS, vec, 3);
 }
 
-#ifdef MTK_HARDWARE
+#ifdef MTK_MT6589
 struct xlog_record {
     const char *tag_str;
     const char *fmt_str;
