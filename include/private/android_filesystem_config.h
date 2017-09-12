@@ -96,6 +96,10 @@
 #define AID_NET_BT_STACK  3008  /* bluetooth: access config files */
 #define AID_QCOM_ONCRPC   3009  /* can read/write /dev/oncrpc files */
 #define AID_QCOM_DIAG     3010  /* can read/write /dev/diag */
+#ifdef MTK_G_MT6589
+#define AID_CCCI          9996
+#define AID_NVRAM         9997
+#endif
 #define AID_SENSORS       3011 /* access to /dev/socket/sensor_ctl_socket & QCCI/QCSI */
 #define AID_IMS           3012  /* can read/write /dev/socket/imsrtp */
 
@@ -191,6 +195,10 @@ static const struct android_id_info android_ids[] = {
     { "net_bw_acct",   AID_NET_BW_ACCT, },
     { "qcom_oncrpc", AID_QCOM_ONCRPC, },
     { "qcom_diag", AID_QCOM_DIAG, },
+#ifdef MTK_G_MT6589
+    { "ccci",          AID_CCCI, },
+    { "nvram",         AID_NVRAM, },
+#endif
     { "ims", AID_IMS, },
     { "net_bt_stack",  AID_NET_BT_STACK, },
 
