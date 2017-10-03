@@ -92,6 +92,7 @@ LOCAL_CFLAGS += -Werror
 
 ifeq ($(TARGET_BOARD_PLATFORM),mt6589)
 LOCAL_CFLAGS += -DMTK_MT6589
+LOCAL_SRC_FILES += MediatekHacks.cpp
 endif
 
 LOCAL_C_INCLUDES += \
