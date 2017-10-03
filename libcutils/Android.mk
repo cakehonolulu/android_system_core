@@ -118,6 +118,10 @@ LOCAL_SRC_FILES := $(commonSources) \
         trace.c \
         uevent.c \
 
+ifeq ($(TARGET_BOARD_PLATFORM),mt6589)
+LOCAL_SRC_FILES += pmem-dev.cpp
+endif # $(TARGET_BOARD_PLATFORM),mt6589
+
 LOCAL_SRC_FILES_arm += \
         arch-arm/memset32.S \
 
